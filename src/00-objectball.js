@@ -128,16 +128,30 @@ function gameObject() {
 
 
 
-
+//
 function allPlayers() {
     let game = gameObject();
     return { ...game.home.players, ...game.away.players  };
 }
-
 console.log(allPlayers())
-
-
+//
 function numPointsScored(playerName) {
     return allPlayers()[playerName].points;
 }
 console.log(numPointsScored("Ben Gordon"));
+//
+function shoeSize(playerName) {
+    return allPlayers()[playerName].shoe;
+}
+console.log(shoeSize("Ben Gordon"));
+//
+function teamColors(teamName) {
+    let game = gameObject();
+    for (let key in game) {
+        if (game[key].teamName === teamName) {
+            return game[key].colors;
+        }
+    }
+}
+console.log(teamColors("Ben Gordon"));
+//
