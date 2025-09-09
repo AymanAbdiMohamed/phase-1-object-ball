@@ -135,3 +135,9 @@ function allPlayers() {
 }
 
 console.log(allPlayers())
+
+
+function numPointsScored(playerName) {
+    return allPlayers()[playerName].points;
+}
+console.log(numPointsScored("Ben Gordon"));
