@@ -2,6 +2,8 @@
 
 
 
+
+
 function gameObject() {
     return {
         home: {
@@ -133,5 +135,4 @@ function allPlayers() {
     let game = gameObject();
     return { ...game.home.players, ...game.away.players  };
 }
-
 console.log(allPlayers())
